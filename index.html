@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="ru">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=720, initial-scale=0.5, maximum-scale=1.0, user-scalable=yes">
+			
+  <title>случайное число.рф — простой удобный точный и понятный генератор случайных чисел</title>
+		
+	<meta name="description" content="Случайное число.рф - генератор случайных чисел для лотерей и розыгрышей">
+	<meta name="keywords" content="Генератор случайных чисел, генератор случайных чисел онлайн, случайные числа, случайное число, последовательность случайных чисел, лотерея, проведение розыгрыша, результаты розыгрыша, рандомайзер, random, случайное число.рф">
+	<meta name="author" content="Karateev Igor">
+	
+  <meta name="yandex-verification" content="e6e9f4f91767e20d" />
+
+	<link rel="stylesheet" href="css/reset.css">
+	<link rel="stylesheet" href="css/style1.css">
+  <link href="icon.png" rel="shortcut icon" type="image/x-icon">
+	<script src="js/jquery.min.js"></script>
+	<script src="js/html2canvas.min.js?rev=3"></script>
+	<!--<script src="https://cdn.rawgit.com/zenorocha/clipboard.js/master/dist/clipboard.min.js"></script>-->
+	<script src="//cdn.jsdelivr.net/clipboard.js/latest/clipboard.min.js"></script>
+	<script src="js/script.js"></script>
+
+	<!-- Yandex.Metrika counter -->
+<script type="text/javascript" >
+   (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+   m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+   (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+
+   ym(87987667, "init", {
+        clickmap:true,
+        trackLinks:true,
+        accurateTrackBounce:true,
+        webvisor:true
+   });
+</script>
+<noscript><div><img src="https://mc.yandex.ru/watch/87987667" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<!-- /Yandex.Metrika counter -->
+
+	<!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-K7CFW4M');</script>
+  <!-- End Google Tag Manager -->
+
+</head>
+	
+<body>
+<script>
+	$('body').on('input', '.input-range', function(){
+	var value = this.value.replace(/[^\d]+/gi, '');
+	if (value < $(this).data('min')) {
+		this.value = $(this).data('min');
+	} else if (value > $(this).data('max')) {
+		this.value = $(this).data('max');
+	} else {
+		this.value = value;
+	}
+});
+</script>
+	  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-K7CFW4M"
+  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+
+	<div class="overlay" id="saveBody1">
+		<div >
+			<div id="js-get-clip">Недоступно</div>
+			<p class="main-title">случайное число.рф -</p>
+
+			<p class="sub-title">Самый простой, точный и понятный
+			<strong>ГЕНЕРАТОР СЛУЧАЙНЫХ ЧИСЕЛ</strong></p>
+			<div class="string"></div>
+			<div class="out-outer">
+				<div class="out " id="out">
+					<span class="digit big" id="out">0</span>
+				</div>
+				
+				<div class="out-hide" id="out-hide" >
+					<span class="digit big" id="out">0</span>
+				</div>
+				
+			</div>
+		<div class="btn-bold" id="resetGenMode2" style="font-size:16px; padding: 12px 14px; display:none;" checked="false" onclick="resetList(); allowResetGenList=true; return true;"> СБРОСИТЬ</div>
+			<div class="btn-bold js-generate" onclick="ym(87987667,'reachGoal','getfigure'); return true;"> СЛУЧАЙНОЕ ЧИСЛО</div>
+			
+			<p class="time" id="time-go">Сейчас: <span id="date"></span> в <span id="clock"></span> GMT +<span id="gmt"> </span></p>
+			<p class="time" id="time-stop">Создано: <span id="date-stop"></span> в <span id="clock-stop"></span> GMT +<span id="gmt-stop"> </span></p>
+		</div>
+		<div class="string2"></div>
+		<p class="title">В ДИАПАЗОНЕ ОТ:</p>
+		
+		<form id="main-param">
+			<div class="wrapper">
+				<input class="input-range" type="text" name='min' id="min" value="1" maxlength="5" data-min="" data-max="99999" autocomplete="off" oninput="resetList()">
+				<span>до</span>
+				<input class="input-range" type="text" name='max' id="max" value="99999" maxlength="6" data-min="" data-max="999999" autocomplete="off" oninput="resetList()">
+			</div>
+			
+			<p class="title">КОЛИЧЕСТВО ЧИСЕЛ:</p>
+			
+			<div class="wrapper">
+				<input class="input-range" type="text" name='count' id='count' value="1" data-min="" data-max="300" autocomplete="off">
+			</div>
+		</form>
+		<p class="check-row"> <input type="checkbox" class="checkbox" id="repeats"> <label for="repeats">Исключить повторы: <span></span></label> </p>
+		<p class="check-row"> <input type="checkbox" class="checkbox" id="no-repeats" onclick="changeMode(this)")>NEW!<label for="no-repeats" style="color: #09a106;"> Без повторений, до последнего числа: <span></span></label> </p>
+		
+<!-- uSocial -->
+<script async src="https://usocial.pro/usocial/usocial.js?uid=e029d581b4f68883&v=6.1.5" data-script="usocial" charset="utf-8"></script>
+<div class="uSocial-Share" data-pid="0ef48b0f7d9acf4568b300c133226708" data-type="share" data-options="round-rect,style3,default,absolute,horizontal,size48,eachCounter0,counter0,nomobile,mobile_position_right" data-social="vk,ok,telegram,wa,bookmarks"></div>
+<!-- /uSocial -->
+		
+		<div class="btn js-clipboard" data-clipboard-target="#js-get-clip">СКОПИРОВАТЬ РЕЗУЛЬТАТ</div>
+		<div class="btn js-to-png">СКАЧАТЬ РЕЗУЛЬТАТ</div>
+		
+	</div>
+	
+
+
+<input name="screenshot" type="hidden" class="screen-uri">
+</body>
+</html>
